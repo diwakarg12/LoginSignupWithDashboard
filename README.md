@@ -19,6 +19,23 @@
    ![Databse Image](https://github.com/diwakarg12/LoginSignupWithDashboard/assets/85389557/b63f5603-62a0-410b-a731-0d5b24d3a8e9)
 
 
-Please visit the link to see the Screenshots of the project.
+#To run the Project plase follow the instruction
+first of all download the file and install node_module in both front-end and backend fike
+
+''' npm install '''
+
+inside backend file create a .env file and paste the code given below
+''' JWT_SECRET = jwtwebtokenisnecessary '''
+
+Now, To run front-end code use 
+
+''' npm run dev '''
+
+To run backend code use 
+
+''' npm start '''
+
+
+Thank you for visiting my Github 
 
 
