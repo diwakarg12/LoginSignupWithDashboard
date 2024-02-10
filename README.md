@@ -1,4 +1,4 @@
-#Login Signup with Dashboard
+# Login Signup with Dashboard
 
 1. User Registration
    ![User Registration](https://github.com/diwakarg12/LoginSignupWithDashboard/assets/85389557/f76a29fd-1685-4b1d-95f2-e51bdcbe5a33)
@@ -19,23 +19,23 @@
    ![Databse Image](https://github.com/diwakarg12/LoginSignupWithDashboard/assets/85389557/b63f5603-62a0-410b-a731-0d5b24d3a8e9)
 
 
-#To run the Project plase follow the instruction
+## To run the Project plase follow the instruction
 first of all download the file and install node_module in both front-end and backend fike
 
-''' npm install '''
+'''npm install'''
 
 inside backend file create a .env file and paste the code given below
-''' JWT_SECRET = jwtwebtokenisnecessary '''
+'''JWT_SECRET = jwtwebtokenisnecessary'''
 
 Now, To run front-end code use 
 
-''' npm run dev '''
+'''npm run dev'''
 
 To run backend code use 
 
-''' npm start '''
+'''npm start'''
 
 
-Thank you for visiting my Github 
+### Thank you for visiting my Github 
 
 
