@@ -9,7 +9,7 @@ const Register = () => {
   const [signup, setSignup] = useState({
     name: "",
     email: "",
-    password: "",
+    password: "1111111111111",
     age: "",
     dob: "",
     phone: "",
@@ -17,16 +17,30 @@ const Register = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    if (signup.password.length < 8)
-      alert("Password should be at least 8 characters long");
-    axios
-      .post("http://localhost:5000/register", signup)
-      .then((res) => {
+    if (signup.password.length < 8) {
+      alert("Password should be at least  8 characters long");
+      return;
+    }
+    if (!signup.dob.length) {
+      alert("Please select DOB!");
+      return;
+    }
+
+    try {
+      const res = await axios.post("http://localhost:5000/register", signup);
+      if (res.status >= 200 && res.status < 300) {
         console.log(res);
         console.log("Successfully signed up!");
         navigate("/login");
-      })
-      .catch((err) => console.log(err));
+      } else {
+        // Handle non-successful status codes
+        console.error(`Server responded with status code ${res.status}`);
+      }
+    } catch (err) {
+      console.log(err);
+      alert("Email already registered.");
+      return;
+    }
 
     setSignup({
       name: "",
@@ -37,6 +51,7 @@ const Register = () => {
       phone: "",
     });
   };
+
   const resetForm = () => {
     setSignup({
       name: "",
